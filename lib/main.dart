@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:zoom_clone/resources/auth_methods.dart';
 import 'package:zoom_clone/screens/home_screen.dart';
+import 'package:zoom_clone/screens/video_call_screen.dart';
 import 'package:zoom_clone/utils/colors.dart';
 
 import 'screens/login_screen.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
       //initialRoute: '/',
       routes: {
         '/login': (context) => const LoginScreen(),
-        '/home': (context) => const HomeScreen()
+        '/home': (context) => const HomeScreen(),
+        '/video_call': (context) => const VideoCallScreen()
       },
       home: StreamBuilder(
         stream: AuthMethod().authChange,
