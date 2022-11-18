@@ -35,7 +35,7 @@ class JitsiMeetMethod {
 
       _firestoreMethods.addToMeetingHistory(meetingName: roomName);
 
-      await JitsiMeet.joinMeeting(options);
+      await JitsiMeet.joinMeeting(options, listener: JitsiMeetingListener());
     } catch (error) {
       print("error: $error");
     }

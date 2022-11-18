@@ -42,4 +42,9 @@ class AuthMethod {
     }
     return result;
   }
+
+  //for signout
+  void signout() async {
+    _auth.signOut();
+  }
 }
